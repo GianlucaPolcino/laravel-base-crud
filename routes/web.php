@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\ComicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PageController::class, 'index'])->name('home');
+
+
+// Rotta resources, ovvero il collegamento con il controller creato con php artisan make:controller {NomeController} -r
+
+Route::resource('comics', ComicController::class);
