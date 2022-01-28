@@ -9,12 +9,12 @@
     @foreach ($comics as $comic)
     <div class="col">
         <img class="w-100" src="{{$comic->thumb}}" alt="">
-        <h4 class="text-center pt-3">
+        <h4 class="text-center py-3">
             {{$comic->title}}
         </h4>
         
         <div class="text-center">
-            <button class="btn btn-primary mt-4">Vedi</button>
+            <a href="{{route('comics.show', $comic)}}" class="btn btn-success">Vedi</a>
         </div>
         
     </div>
